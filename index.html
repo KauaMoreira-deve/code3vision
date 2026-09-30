@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09090c" />
+  <meta name="description"
+    content="Code4Vision desenvolve landing pages, sites institucionais e sistemas web sob medida para transformar ideias em negócios digitais." />
+  <title>Code4Vision — Desenvolvimento de sites e sistemas web</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#d0bcff", "secondary": "#7bd0ff", "tertiary-fixed": "#50ffaf", "on-primary-fixed": "#23005c", "error": "#ffb4ab", "tertiary-container": "#00a56b", "on-primary-fixed-variant": "#5516be", "on-surface": "#e3e1e9", "on-surface-variant": "#cbc3d7", "tertiary": "#00e293", "surface-container": "#1e1f25", "inverse-primary": "#6d3bd7", "surface-tint": "#d0bcff", "on-tertiary": "#003921", "surface-variant": "#34343a", "surface-container-low": "#1a1b21", "on-secondary-fixed": "#001e2c", "primary-fixed": "#e9ddff", "primary": "#d0bcff", "primary-container": "#a078ff", "surface": "#121318", "inverse-on-surface": "#2f3036", "on-error-container": "#ffdad6", "surface-container-high": "#292a2f", "surface-container-lowest": "#0d0e13", "on-background": "#e3e1e9", "on-secondary-container": "#00374d", "outline": "#958ea0", "on-secondary-fixed-variant": "#004c69", "outline-variant": "#494454", "inverse-surface": "#e3e1e9", "secondary-container": "#00a6e0", "on-tertiary-container": "#00311c", "on-error": "#690005", "tertiary-fixed-dim": "#00e293", "secondary-fixed-dim": "#7bd0ff", "on-secondary": "#00354a", "on-tertiary-fixed": "#002111", "on-primary-container": "#340080", "on-primary": "#3c0091", "background": "#121318", "surface-bright": "#38393f", "secondary-fixed": "#c4e7ff", "surface-container-highest": "#34343a", "surface-dim": "#121318", "on-tertiary-fixed-variant": "#005232", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-sm": "1rem", "space-xs": "0.25rem", "margin": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "gutter": "1.5rem", "space-xl": "2.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "display-hero": ["Space Grotesk"], "headline-md-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-badge": ["Space Grotesk"], "label-md": ["Space Grotesk"], "label-lg": ["Space Grotesk"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-md-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }] } } } };</script>
+
+  <script src="./js/digits.js" defer></script>
+  <script src="./js/vision.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow-up-right" viewBox="0 0 24 24">
+      <path d="M5 19 19 5M5 5h14v14" />
+    </symbol>
+    <symbol id="arrow-down-right" viewBox="0 0 24 24">
+      <path d="m5 5 14 14M5 19h14V5" />
+    </symbol>
+    <symbol id="arrow-down" viewBox="0 0 24 24">
+      <path d="M12 4v16m-6-6 6 6 6-6" />
+    </symbol>
+    <symbol id="brand-mark" viewBox="0 0 36 36">
+      <path d="M20 3 5 23h16v10h7V16H17L27 3Z" fill="currentColor" />
+    </symbol>
+    <symbol id="close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M6 18 18 6" />
+    </symbol>
+  </svg>
+
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Code4Vision — Início">
+        <svg class="brand-symbol" aria-hidden="true">
+          <use href="#brand-mark" />
+        </svg>
+        <span>code<span class="brand-four">4</span>vision<span class="registered">®</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#cases">Projetos</a>
+      </nav>
+      <button class="header-cta" type="button" data-open="briefing">Vamos conversar <svg class="icon"
+          aria-hidden="true">
+          <use href="#arrow-up-right" />
+        </svg></button>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="mobile-nav"><span></span><span></span></button>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel" hidden>
+        <a href="#servicos">Serviços <span>01</span></a>
+        <a href="#equipe">Equipe <span>02</span></a>
+        <a href="#cases">Projetos <span>03</span></a>
+        <button class="mobile-contact" type="button" data-open="briefing">Vamos conversar ↗</button>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-content">
+          <p class="eyebrow"><span class="status-dot"></span> Tecnologia para empresas que querem evoluir.</p>
+          <h1 id="hero-heading">Tecnologia<br />que move<br /><em>negócios.</em><span class="title-star"
+              aria-hidden="true">✳</span></h1>
+          <p class="hero-description">Criamos landing pages, sites institucionais e sistemas web sob medida para sua
+            empresa crescer, vender e operar melhor.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" type="button" data-open="briefing">Tire seu projeto do papel <svg
+                class="icon" aria-hidden="true">
+                <use href="#arrow-up-right" />
+              </svg></button>
+            <a class="text-link" href="#servicos">Conheça nossos serviços <svg class="icon" aria-hidden="true">
+                <use href="#arrow-down-right" />
+              </svg></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Contagem animada de um a três em partículas roxas">
+          <div class="visual-caption"><span class="caption-cross">+</span><span>SOLUÇÕES WEB EM MOVIMENTO<br /><span
+                class="caption-muted">DESIGN, CÓDIGO E ESTRATÉGIA EM CADA PROJETO.</span></span></div>
+          <div class="visual-stage">
+            <div class="art-fallback" aria-hidden="true">1</div>
+            <canvas id="vision-canvas" role="img"
+              aria-label="Partículas roxas tridimensionais formando os números 1, 2 e 3 em sequência"></canvas>
+          </div>
+          <div class="visual-coordinate coordinate-top" aria-hidden="true">[ C4V—001 ]</div>
+          <div class="visual-coordinate coordinate-side" aria-hidden="true">TECNOLOGIA PARA O SEU PRÓXIMO PASSO</div>
+          <div class="art-controls">
+            <span class="art-counter"><span class="art-counter-active">01</span> <span class="counter-rule"></span>
+              PRODUTOS DIGITAIS EM EVOLUÇÃO</span>
+            <button class="motion-toggle" id="motion-toggle" type="button" aria-label="Pausar animação"
+              aria-pressed="false"><span class="pause-glyph" aria-hidden="true"></span></button>
+          </div>
+        </div>
+
+
+      </section>
+  <!-- SERVIÇOS & EXPERTISE -->
+  <section class="w-full py-space-xl bg-surface-container-lowest/60 relative" id="servicos">
+    <div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+        <div class="max-w-2xl">
+          <div
+            class="inline-flex items-center gap-space-xs font-label-badge text-label-badge text-secondary uppercase tracking-widest mb-space-xs">
+            <span class="material-symbols-outlined text-[16px]">domain_verification</span>
+            Desenvolvimento Web
+          </div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+            Soluções digitais para <span
+              class="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">cada etapa do seu negócio</span>
+          </h2>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Da primeira página ao sistema que organiza sua operação: planejamos, criamos e evoluímos produtos web
+          rápidos, seguros e fáceis de usar.
+        </p>
+      </div>
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <!-- Card 1 -->
+        <div
+          class="group p-space-lg rounded-xl bg-surface-container shadow-md hover:shadow-[0_0_30px_rgba(160,120,255,0.25)] transition-all transform hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div
+              class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:text-primary-fixed transition-colors shadow-inner mb-space-md">
+              <span class="material-symbols-outlined text-[30px]">devices</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-sm leading-snug">
+              Landing Pages
+            </h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Páginas focadas em conversão, com visual profissional, carregamento rápido e estrutura preparada para
+              campanhas e captação de clientes.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-space-md">
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary">Next.js
+              Design responsivo</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary">SEO</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary">Analytics</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary">Conversão</span>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="group p-space-lg rounded-xl bg-surface-container shadow-md hover:shadow-[0_0_30px_rgba(0,226,147,0.25)] transition-all transform hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div
+              class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary group-hover:text-tertiary-fixed transition-colors shadow-inner mb-space-md">
+              <span class="material-symbols-outlined text-[30px]">corporate_fare</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-sm leading-snug">
+              Sites Institucionais
+            </h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Sites que apresentam sua empresa, seus diferenciais e seus serviços com clareza, credibilidade e uma
+              experiência consistente em qualquer dispositivo.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-space-md">
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-tertiary">Conteúdo estratégico</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-tertiary">CMS</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-tertiary">Acessibilidade</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-tertiary">Performance</span>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="group p-space-lg rounded-xl bg-surface-container shadow-md hover:shadow-[0_0_30px_rgba(123,208,255,0.25)] transition-all transform hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div
+              class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:text-secondary-fixed transition-colors shadow-inner mb-space-md">
+              <span class="material-symbols-outlined text-[30px]">dashboard_customize</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-sm leading-snug">
+              Sistemas Web
+            </h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Plataformas personalizadas para automatizar processos, centralizar informações e conectar equipes,
+              clientes e dados em um só lugar.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-space-md">
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-secondary">Dashboards</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-secondary">Automação</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-secondary">Integrações</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-secondary">Banco de dados</span>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="group p-space-lg rounded-xl bg-surface-container shadow-md hover:shadow-[0_0_30px_rgba(208,188,255,0.25)] transition-all transform hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div
+              class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-fixed-dim group-hover:text-primary transition-colors shadow-inner mb-space-md">
+              <span class="material-symbols-outlined text-[30px]">settings_suggest</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-sm leading-snug">
+              Manutenção &amp; Evolução
+            </h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Suporte técnico, melhorias contínuas e novas funcionalidades para manter seu site ou sistema seguro,
+              atualizado e acompanhando o crescimento da empresa.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-space-md">
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary-fixed-dim">Suporte</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary-fixed-dim">Atualizações</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary-fixed-dim">Segurança</span>
+            <span
+              class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary-fixed-dim">Otimização</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SEÇÃO DESTAQUE: EQUIPE FUNDADORA -->
+  <section class="w-full py-space-xl relative overflow-hidden" id="equipe">
+    <!-- Ambient backlights for founders -->
+    <div
+      class="absolute top-1/2 left-10 -translate-y-1/2 w-80 h-80 bg-primary-container/15 blur-[90px] pointer-events-none rounded-full">
+    </div>
+    <div
+      class="absolute top-1/2 right-10 -translate-y-1/2 w-80 h-80 bg-tertiary-container/15 blur-[90px] pointer-events-none rounded-full">
+    </div>
+    <div class="max-w-7xl mx-auto px-margin-sm lg:px-margin relative z-10">
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-space-xl">
+        <div
+          class="inline-flex items-center gap-space-xs font-label-badge text-label-badge text-primary uppercase tracking-widest mb-space-xs">
+          <span class="material-symbols-outlined text-[16px]">groups</span>
+          Liderança &amp; Fundadores
+        </div>
+        <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight mb-space-sm">
+          Conheça os Especialistas por Trás da <span
+            class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">Code4Vision</span>
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          Três mentes complementares unindo estratégia, engenharia avançada e design de produtos para entregar o
+          extraordinário.
+        </p>
+      </div>
+      <!-- 3 Founders Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+        <!-- Founder 1: Lucas Andrade -->
+        <div
+          class="rounded-xl bg-surface-container/80 shadow-xl overflow-hidden flex flex-col group hover:shadow-[0_0_32px_rgba(160,120,255,0.25)] transition-all">
+          <div class="relative h-80 w-full overflow-hidden bg-surface-container-highest">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="Editorial portrait photograph of Lucas Andrade, a professional software architect man in his early 30s with focused sharp expression, modern glasses, dark studio background accented with deep violet and neon purple rim lights, tech minimalism aesthetic, cinematic contrast."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvecpRqQnqOY129c9xv07o8a_XL628QZmsnXcYHHE0bCbXKGHVO9whjMsFfbvaTd9QWwStp2tpJuc3MoJ4xUcHyeF4D3RszIU2KQiNgqIofdirhmOqlS1RNZBrFkzCPzaRa6hQKnGMFDE9olMbx6j22ecrJ-KZ8Wfbo87xKldiwQ-QykQUZ0LdwvsZuXqlMHwq_-367IIgLqDM_YCvqVO0KonR7Gl3h-F7k_C3QddyL0aMXFjqenoViQ" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/20 to-transparent">
+            </div>
+            <div
+              class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px- space-xs py-1 rounded-md">
+              <span class="font-label-badge text-label-badge text-primary-fixed uppercase tracking-wider px-2">CTO
+                &amp; Software Architect</span>
+            </div>
+          </div>
+          <div class="p-space-lg flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Lucas Andrade</h3>
+              <p class="font-label-md text-label-md text-primary font-medium mb-space-md">Co-fundador &amp; Diretor
+                de Tecnologia</p>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+                Ex-Tech Lead em fintechs globais, especialista em arquitetura escalável, sistemas de baixíssima
+                latência e algoritmos de alta eficiência computacional.
+              </p>
+              <div class="mb-space-md">
+                <div class="font-label-badge text-label-badge uppercase tracking-wider text-outline mb-1.5">
+                  Especialidades Chave</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Sistemas
+                    Distribuídos</span>
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Rust
+                    &amp; Go</span>
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Neural
+                    Gateways</span>
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">High-Throughput</span>
+                </div>
+              </div>
+            </div>
+            <!-- Social Links -->
+            <div
+              class="flex items-center gap-space-sm pt-space-md bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-space-sm">
+              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-outline hover:text-primary transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-[18px]">code</span> GitHub
+              </a>
+              <span class="text-outline-variant">•</span>
+              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-outline hover:text-secondary transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-[18px]">share</span> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Founder 2: Beatriz Ferreira -->
+        <div
+          class="rounded-xl bg-surface-container/80 shadow-xl overflow-hidden flex flex-col group hover:shadow-[0_0_32px_rgba(0,226,147,0.25)] transition-all">
+          <div class="relative h-80 w-full overflow-hidden bg-surface-container-highest">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="Editorial portrait photograph of Beatriz Ferreira, female Head of Product, poised and visionary leader in late 20s with charismatic look, sleek dark attire, studio backdrop with subtle electric cyan and radiant neon emerald edge lights, futuristic tech atmosphere."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvph44cVbhMCefrx3Np1lDJ8dndunJgPCNdN9FI2hysf4VlXLIpHht0I3fQXwIHbT_61oKSeyAyzHxbM7e_pU4DtC_EdmBqNzWkbc7eDJQIGfRbpdhDOg8wrSy2XulJWp2sCpPdY767cp-I62GfLxiaMpNHMkhzWclMM7lHLJolaF7S33JeILyihwsZrFS1owpBdsGbtnOxGh8MGZYzzOcEFrMoDprU9ZgRQrDUf5FnxHFlhRemKN00A" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/20 to-transparent">
+            </div>
+            <div
+              class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-xs py-1 rounded-md">
+              <span class="font-label-badge text-label-badge text-tertiary uppercase tracking-wider px-2">Head of
+                Product &amp; AI Strategy</span>
+            </div>
+          </div>
+          <div class="p-space-lg flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Beatriz Ferreira</h3>
+              <p class="font-label-md text-label-md text-tertiary font-medium mb-space-md">Co-fundadora &amp;
+                Estrategista de IA</p>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+                Liderou o lançamento de produtos que escalaram para mais de 1 milhão de usuários ativos. Apaixonada
+                por traduzir capacidades de IA em modelos de negócios rentáveis.
+              </p>
+              <div class="mb-space-md">
+                <div class="font-label-badge text-label-badge uppercase tracking-wider text-outline mb-1.5">
+                  Especialidades Chave</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Estratégia
+                    de Produtos</span>
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Modelos
+                    LLM</span>
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">UX
+                    Research</span>
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Data
+                    Science</span>
+                </div>
+              </div>
+            </div>
+            <!-- Social Links -->
+            <div
+              class="flex items-center gap-space-sm pt-space-md bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-space-sm">
+              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-outline hover:text-secondary transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-[18px]">share</span> LinkedIn
+              </a>
+              <span class="text-outline-variant">•</span>
+              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-outline hover:text-tertiary transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-[18px]">article</span> Substack
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Founder 3: Gabriel Rocha -->
+        <div
+          class="rounded-xl bg-surface-container/80 shadow-xl overflow-hidden flex flex-col group hover:shadow-[0_0_32px_rgba(123,208,255,0.25)] transition-all">
+          <div class="relative h-80 w-full overflow-hidden bg-surface-container-highest">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="Editorial portrait photograph of Gabriel Rocha, creative male design director and frontend engineer with creative sharp aesthetic, modern dark studio environment illuminated with dual-color tone of neon blue and subtle violet laser glow, sleek high-tech portraiture."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo5Qttu9dlssnEDLi2b5HeO6olEcF4GtSwq6OFyGSMuVpKW5RW2-5VH8X_lH1paOYUHPGXzolw5I5kZm2o5gXt13iA140zkP7CgZ--WL8Tfg6BnSJFhvFaOdqprHnX1X1fKSZGW3UdjbBWkmkGw0G2LQ0aJqMAxttyLLkU0v4N6jztiGy73XGtYMITHqVh-PBVhHLXeW5Nq1RfSV6K4abU7-q8x1SUWt8yPvlmafT6fv5Q3Inwc2rKGg" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/20 to-transparent">
+            </div>
+            <div
+              class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-xs py-1 rounded-md">
+              <span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider px-2">Design
+                &amp; Frontend Director</span>
+            </div>
+          </div>
+          <div class="p-space-lg flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Gabriel Rocha</h3>
+              <p class="font-label-md text-label-md text-secondary font-medium mb-space-md">Co-fundador &amp;
+                Diretor de Experiência</p>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+                Especialista em interfaces intuitivas, sistemas de design com tokenização estrita e experiências
+                visuais imersivas que convertem, encantam e geram valor imediato.
+              </p>
+              <div class="mb-space-md">
+                <div class="font-label-badge text-label-badge uppercase tracking-wider text-outline mb-1.5">
+                  Especialidades Chave</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Design
+                    Systems</span>
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">WebGL
+                    &amp; Three.js</span>
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Next.js</span>
+                  <span
+                    class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Micro-Interactions</span>
+                </div>
+              </div>
+            </div>
+            <!-- Social Links -->
+            <div
+              class="flex items-center gap-space-sm pt-space-md bg-surface-container-low/50 -mx-space-lg -mb-space-lg px-space-lg py-space-sm">
+              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-outline hover:text-primary transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-[18px]">palette</span> Dribbble
+              </a>
+              <span class="text-outline-variant">•</span>
+              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-outline hover:text-secondary transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-[18px]">code</span> GitHub
+              </a>
+              <span class="text-outline-variant">•</span>
+              <a class="inline-flex items-center gap-1 font-label-md text-label-md text-outline hover:text-tertiary transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-[18px]">share</span> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- STACK TECNOLÓGICA -->
+  <section class="w-full py-space-lg bg-surface-container-lowest overflow-hidden">
+    <div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+      <div class="flex flex-col items-center text-center mb-space-md">
+        <span class="font-label-badge text-label-badge text-outline uppercase tracking-widest">Stack de Engenharia
+          Certificada</span>
+      </div>
+      <!-- Tech Badges Grid -->
+      <div class="flex flex-wrap items-center justify-center gap-space-sm">
+        <div
+          class="px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-xs text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+          <span class="font-label-md text-label-md">Next.js 15</span>
+        </div>
+        <div
+          class="px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-xs text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">code_blocks</span>
+          <span class="font-label-md text-label-md">TypeScript</span>
+        </div>
+        <div
+          class="px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-xs text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-tertiary">memory</span>
+          <span class="font-label-md text-label-md">Python &amp; PyTorch</span>
+        </div>
+        <div
+          class="px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-xs text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-primary-fixed-dim">speed</span>
+          <span class="font-label-md text-label-md">Rust Engine</span>
+        </div>
+        <div
+          class="px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-xs text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary">cloud</span>
+          <span class="font-label-md text-label-md">AWS Architecture</span>
+        </div>
+        <div
+          class="px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-xs text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-tertiary">hub</span>
+          <span class="font-label-md text-label-md">Kubernetes</span>
+        </div>
+        <div
+          class="px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-xs text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-secondary-fixed">database</span>
+          <span class="font-label-md text-label-md">PostgreSQL / pgvector</span>
+        </div>
+        <div
+          class="px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-xs text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-primary">auto_awesome</span>
+          <span class="font-label-md text-label-md">OpenAI Enterprise</span>
+        </div>
+        <div
+          class="px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-xs text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px] text-tertiary">deployed_code</span>
+          <span class="font-label-md text-label-md">Docker Microservices</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CASES & PROJETOS RECENTES -->
+  <section class="w-full py-space-xl relative" id="cases">
+    <div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+        <div>
+          <div
+            class="inline-flex items-center gap-space-xs font-label-badge text-label-badge text-tertiary uppercase tracking-widest mb-space-xs">
+            <span class="material-symbols-outlined text-[16px]">folder_special</span>
+            Portfólio em Produção
+          </div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+            Impacto Comprovado em <span
+              class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">Projetos
+              Críticos</span>
+          </h2>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+          Casos reais onde inovação técnica resultou em ganhos operacionais diretos e dominância de mercado.
+        </p>
+      </div>
+      <!-- Case Studies Tri-Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+        <!-- Case 1: Nexus AI -->
+        <div
+          class="group rounded-xl bg-surface-container shadow-lg hover:shadow-[0_0_36px_rgba(160,120,255,0.25)] transition-all flex flex-col justify-between overflow-hidden">
+          <div class="relative h-56 w-full bg-surface-container-highest overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="Futuristic digital command dashboard displaying neural network graphs, predictive analytics charts, dark modern UI glowing with purple and cyan accents, high resolution software showcase."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRV0l3cwxZTFX0_qVXulquFpYpVmX8-4LNeaHJArMF4NTIromZsaHiwLuQHboUFmS6FpXioH3gS_itKrM_vc9wV6DeF1GqoY-XsuV8dUxG3Yab9emNuGVeuabvQUiKpXkKADF8Jugmlq2D_Vaz_xGNTHYUsagUi3vX-aMmyMtHnWVO0eXbUX_hbxiqhbikxiLk1tsU_NuvZDb4VXKno4o74II1QnyCTHAlkOJUL0kv9zk6JpiDiOVO5A" />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent">
+            </div>
+            <div class="absolute bottom-3 left-4 flex items-center gap-2">
+              <span
+                class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-surface-container-lowest/90 text-tertiary font-mono font-bold">-40%
+                CUSTOS OPEX</span>
+            </div>
+          </div>
+          <div class="p-space-lg flex flex-col flex-1 justify-between">
+            <div>
+              <div class="font-label-badge text-label-badge text-primary uppercase tracking-wider mb-1">IA &amp;
+                Predictive Analytics</div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">Nexus AI Platform
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Plataforma de inteligência preditiva empresarial para orquestração logística. Reduziu em 40% custos
+                operacionais e automatizou 85% do fluxo de decisões diárias.
+              </p>
+            </div>
+            <div class="pt-space-md border-t-0 flex items-center justify-between text-body-sm text-outline">
+              <div class="flex items-center gap-1 text-tertiary">
+                <span class="material-symbols-outlined text-[18px]">trending_up</span>
+                <span class="font-label-badge text-label-badge">ROI EM 90 DIAS</span>
+              </div>
+              <span class="font-label-badge text-label-badge text-on-surface-variant">ENTERPRISE SAAS</span>
+            </div>
+          </div>
+        </div>
+        <!-- Case 2: VoltPay -->
+        <div
+          class="group rounded-xl bg-surface-container shadow-lg hover:shadow-[0_0_36px_rgba(0,226,147,0.25)] transition-all flex flex-col justify-between overflow-hidden">
+          <div class="relative h-56 w-full bg-surface-container-highest overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="High speed fintech payment infrastructure interface with glowing transaction nodes, cryptographic security badges, ultra clean dark mode dashboard with electric cyan and green neon telemetry markers."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsvoE2HBKajlxDnmSs3C2OmhIymEFG21-UQx4hCOwtJfoLiC8YNaEaQcgOaLAhay6y60-93YkgqV0UVv8AyjU6tI9JFfWY-msaylXG6vDgEAEd2G6eZiIuB6M9ynvj1PtEKjaRs3KGMMFG8UN_v35nhHXCX26KQ7EUa_TNe1n0zBwZb2WrR7E3zr7TlYNa0wHDV199obX7r9rO0OwQLRM4XcWsBRvnEf6g_0zrVxJp6W9UVtXSwkkb-Q" />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent">
+            </div>
+            <div class="absolute bottom-3 left-4 flex items-center gap-2">
+              <span
+                class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-surface-container-lowest/90 text-tertiary font-mono font-bold">&lt;
+                30MS LATÊNCIA</span>
+            </div>
+          </div>
+          <div class="p-space-lg flex flex-col flex-1 justify-between">
+            <div>
+              <div class="font-label-badge text-label-badge text-secondary uppercase tracking-wider mb-1">Fintech
+                &amp; High-Frequency</div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">VoltPay Core
+                Gateway</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Motor de processamento de pagamentos construído em Rust e Go. Processa mais de 12.000 requisições
+                por segundo com tempo de resposta recorde e zero downtimes.
+              </p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between text-body-sm text-outline">
+              <div class="flex items-center gap-1 text-secondary">
+                <span class="material-symbols-outlined text-[18px]">speed</span>
+                <span class="font-label-badge text-label-badge">12K REQ/SEC</span>
+              </div>
+              <span class="font-label-badge text-label-badge text-on-surface-variant">PCI-DSS LEVEL 1</span>
+            </div>
+          </div>
+        </div>
+        <!-- Case 3: Aether Cloud -->
+        <div
+          class="group rounded-xl bg-surface-container shadow-lg hover:shadow-[0_0_36px_rgba(123,208,255,0.25)] transition-all flex flex-col justify-between overflow-hidden">
+          <div class="relative h-56 w-full bg-surface-container-highest overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              data-alt="Futuristic multi-cloud infrastructure orchestration monitor, global map with glowing interconnected server hubs, real time container telemetry, deep indigo and radiant azure lighting."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuABZEifoZsLb7zqHrv9mMyEXnJ1WJ2TQPDqzjYJu4hyoI6m_fODiIStoeqvLUVFjS0PpdGJsvt8zsIZJbYDxWsxlvH2AtFn7IV_twOQHOKLC5KG3vPcLrk93Ip43rhg9Ry9Mv6nzwzu4D1_F8HqHq-kf__vNvAqTspoB8o99qvi4C1hGIQVQKhg3Ikk4TohDmFobpL166GK3tiBBSOPICqln1Eq5lojlAoWbvn_JZHH5NK0HnPx04TMJQ" />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent">
+            </div>
+            <div class="absolute bottom-3 left-4 flex items-center gap-2">
+              <span
+                class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-surface-container-lowest/90 text-secondary-fixed font-mono font-bold">100%
+                AUTOMATIZADO</span>
+            </div>
+          </div>
+          <div class="p-space-lg flex flex-col flex-1 justify-between">
+            <div>
+              <div class="font-label-badge text-label-badge text-primary-fixed-dim uppercase tracking-wider mb-1">
+                DevOps &amp; Multi-Cloud</div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">Aether Cloud
+                Orchestrator</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Sistema inteligente de orquestração híbrida de clusters distribuídos (AWS + Bare-Metal) com
+                auto-healing instantâneo e telemetria preditiva de anomalias.
+              </p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between text-body-sm text-outline">
+              <div class="flex items-center gap-1 text-primary">
+                <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                <span class="font-label-badge text-label-badge">ZERO DOWNTIME</span>
+              </div>
+              <span class="font-label-badge text-label-badge text-on-surface-variant">MULTI-REGION</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA FINAL & FORMULÁRIO DE CONTATO -->
+  <section class="w-full py-space-xl relative overflow-hidden" id="contato">
+    <!-- Mesh Glow Background -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-surface via-surface-container-low to-surface-container-lowest pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-gradient-to-t from-primary-container/20 via-secondary-container/15 to-tertiary-container/10 blur-[120px] pointer-events-none rounded-full">
+    </div>
+    <div class="max-w-7xl mx-auto px-margin-sm lg:px-margin relative z-10">
+      <div
+        class="rounded-xl bg-surface-container/90 shadow-2xl overflow-hidden p-space-lg lg:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <!-- Left Banner Description -->
+        <div class="lg:col-span-6 flex flex-col justify-between">
+          <div>
+            <div
+              class="inline-flex items-center gap-space-xs font-label-badge text-label-badge text-tertiary uppercase tracking-widest mb-space-sm">
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+              </span>
+              Canal Prioritário de Engenharia
+            </div>
+            <h2
+              class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight mb-space-md leading-tight">
+              Pronto para Construir o <span
+                class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">Futuro
+                do Seu Negócio</span>?
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+              Conte-nos sobre os desafios técnicos da sua operação. Nossos fundadores e líderes técnicos conduzem
+              uma análise preliminar em até 24 horas.
+            </p>
+          </div>
+          <!-- Trust Badges -->
+          <div class="flex flex-col gap-space-sm pt-space-md">
+            <div class="flex items-center gap-space-sm text-on-surface">
+              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+                <span class="material-symbols-outlined text-[18px]">verified</span>
+              </div>
+              <span class="font-body-sm text-body-sm">Acordo de Não Divulgação (NDA) sob solicitação antes da
+                primeira call</span>
+            </div>
+            <div class="flex items-center gap-space-sm text-on-surface">
+              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-[18px]">schedule</span>
+              </div>
+              <span class="font-body-sm text-body-sm">Kick-off arquitetural em até 5 dias úteis após
+                validação</span>
+            </div>
+            <div class="flex items-center gap-space-sm text-on-surface">
+              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[18px]">support_agent</span>
+              </div>
+              <span class="font-body-sm text-body-sm">Acompanhamento contínuo e suporte de engenharia 24/7</span>
+            </div>
+          </div>
+        </div>
+        <!-- Right Quick Interactive Form -->
+        <div
+          class="lg:col-span-6 bg-surface-container-low/90 p-space-lg rounded-xl shadow-inner flex flex-col justify-center">
+          <form class="flex flex-col gap-space-md" id="contactForm"
+            onsubmit="event.preventDefault(); document.getElementById('formSuccess').classList.remove('hidden'); this.classList.add('hidden');">
+            <div>
+              <label class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-1"
+                for="nome">Seu Nome Completo</label>
+              <input
+                class="w-full bg-surface-container-high text-on-surface placeholder:text-outline font-body-sm text-body-sm px-space-md py-space-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-primary shadow-inner"
+                id="nome" placeholder="Ex: Carlos Mendonça" required="" type="text" />
+            </div>
+            <div>
+              <label class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-1"
+                for="email">E-mail Corporativo</label>
+              <input
+                class="w-full bg-surface-container-high text-on-surface placeholder:text-outline font-body-sm text-body-sm px-space-md py-space-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-primary shadow-inner"
+                id="email" placeholder="carlos@suaempresa.com.br" required="" type="email" />
+            </div>
+            <div>
+              <label class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-1"
+                for="projeto">Tipo de Projeto / Escopo</label>
+              <select
+                class="w-full bg-surface-container-high text-on-surface font-body-sm text-body-sm px-space-md py-space-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-primary shadow-inner cursor-pointer"
+                id="projeto">
+                <option class="bg-surface-container-high" value="ia">Inteligência Artificial &amp; Modelos
+                  Customizados</option>
+                <option class="bg-surface-container-high" value="app">Desenvolvimento Web &amp; Mobile Escalável
+                </option>
+                <option class="bg-surface-container-high" value="cloud">Arquitetura Cloud &amp; Migração de
+                  Infraestrutura</option>
+                <option class="bg-surface-container-high" value="dados">Engenharia de Dados &amp; Cybersegurança
+                </option>
+                <option class="bg-surface-container-high" value="consultoria">Auditoria e Diagnóstico Técnico
+                  Completo</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-1"
+                for="mensagem">Resumo do Desafio</label>
+              <textarea
+                class="w-full bg-surface-container-high text-on-surface placeholder:text-outline font-body-sm text-body-sm px-space-md py-space-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-primary shadow-inner resize-none"
+                id="mensagem" placeholder="Descreva brevemente o objetivo, prazos estimados ou métricas esperadas..."
+                rows="3"></textarea>
+            </div>
+            <button
+              class="w-full mt-space-xs inline-flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-xl font-label-lg text-label-lg text-on-primary bg-gradient-to-r from-primary-container via-secondary-container to-tertiary-container shadow-[0_0_24px_rgba(160,120,255,0.4)] hover:shadow-[0_0_32px_rgba(0,226,147,0.5)] transition-all transform hover:-translate-y-0.5"
+              type="submit">
+              <span>Iniciar Conversa com Especialistas</span>
+              <span class="material-symbols-outlined text-[20px]">send</span>
+            </button>
+          </form>
+          <!-- Interactive Form Feedback State -->
+          <div class="hidden flex-col items-center text-center p-space-lg" id="formSuccess">
+            <div
+              class="w-16 h-16 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary mb-space-md shadow-[0_0_24px_rgba(0,226,147,0.4)]">
+              <span class="material-symbols-outlined text-[36px]">mark_email_read</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">Solicitação Enviada!
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-md">
+              Obrigado por confiar na Code4Vision. Nossa equipe de arquitetura retornará o contato com o
+              pré-diagnóstico em menos de 24 horas.
+            </p>
+            <span
+              class="font-label-badge text-label-badge text-tertiary bg-surface-container px-space-md py-1 rounded-full">PROTOCOLO:
+              #C4V-8829</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </main>
+  <footer class="w-full bg-surface-container-lowest pt-space-xl pb-space-lg">
+    <div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-xl">
+        <div class="lg:col-span-4 flex flex-col gap-space-md">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-primary"><span
+                class="material-symbols-outlined text-[20px]">terminal</span></div><span
+              class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">Code<span
+                class="text-primary">4</span>Vision</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Arquitetura de software de alta
+            performance, interfaces imersivas e soluções de computação neural para organizações com visão de vanguarda.
+          </p>
+          <div
+            class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-low max-w-fit shadow-[0_0_16px_rgba(0,226,147,0.15)]">
+            <span class="relative flex h-2.5 w-2.5"><span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span
+                class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span></span><span
+              class="font-label-badge text-label-badge text-on-surface uppercase">Disponível para novos projetos</span>
+          </div>
+        </div>
+        <div class="lg:col-span-2 flex flex-col gap-space-sm"><span
+            class="font-label-lg text-label-lg font-bold text-on-surface uppercase tracking-wider mb-space-xs">Navegação</span>
+          <nav class="flex flex-col gap-space-xs"><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors"
+              data-path="inicio" href="#">Início</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors"
+              data-path="servicos" href="#">Serviços</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors"
+              data-path="sobre-nos" href="#">Sobre Nós</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors"
+              data-path="equipe" href="#">Equipe</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors"
+              data-path="projetos" href="#">Projetos</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors"
+              data-path="depoimentos" href="#">Depoimentos</a></nav>
+        </div>
+        <div class="lg:col-span-2 flex flex-col gap-space-sm"><span
+            class="font-label-lg text-label-lg font-bold text-on-surface uppercase tracking-wider mb-space-xs">Redes</span>
+          <div class="flex flex-col gap-space-xs"><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-xs"
+              href="#"><span class="material-symbols-outlined text-[16px]">code</span> GitHub</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-space-xs"
+              href="#"><span class="material-symbols-outlined text-[16px]">share</span> LinkedIn</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-xs"
+              href="#"><span class="material-symbols-outlined text-[16px]">forum</span> Discord</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-space-xs"
+              href="#"><span class="material-symbols-outlined text-[16px]">tag</span> X (Twitter)</a></div>
+        </div>
+        <div class="lg:col-span-4 flex flex-col gap-space-md"><span
+            class="font-label-lg text-label-lg font-bold text-on-surface uppercase tracking-wider">Transmissões de
+            Engenharia</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Receba análises arquiteturais, frameworks
+            proprietários e atualizações de lançamentos.</p>
+          <div class="flex items-center gap-space-xs"><input
+              class="bg-surface-container-high font-body-sm text-body-sm text-on-surface placeholder:text-outline px-space-md py-space-sm rounded-xl flex-1 focus:outline-none focus:ring-1 focus:ring-primary shadow-inner"
+              placeholder="seu.email@empresa.com" type="email" /><button
+              class="bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-sm rounded-xl hover:bg-primary-fixed transition-colors flex items-center justify-center"
+              type="button"><span class="material-symbols-outlined text-[20px]">send</span></button></div>
+          <div class="flex items-center gap-space-md pt-space-xs text-outline">
+            <div class="flex items-center gap-space-xs"><span
+                class="material-symbols-outlined text-[18px] text-tertiary">verified_user</span><span
+                class="font-label-badge text-label-badge">ISO 27001 SECURE</span></div>
+            <div class="flex items-center gap-space-xs"><span
+                class="material-symbols-outlined text-[18px] text-secondary">lock</span><span
+                class="font-label-badge text-label-badge">SOC2 TYPE II</span></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-low/40 rounded-xl px-space-md py-space-md">
+        <div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span>© 2025
+            Code4Vision Systems Inc. Todos os direitos reservados.</span></div>
+        <div class="flex items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><a
+            class="hover:text-on-surface transition-colors" href="#">Privacidade</a><a
+            class="hover:text-on-surface transition-colors" href="#">Termos de Uso</a><a
+            class="hover:text-on-surface transition-colors" href="#">Segurança</a><span
+            class="font-label-badge text-label-badge text-tertiary-fixed-dim bg-surface-container px-space-sm py-0.5 rounded-full">LATENCY:
+            12ms</span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
+                                                                                                                                                          

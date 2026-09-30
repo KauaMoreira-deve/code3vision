@@ -1,0 +1,282 @@
+/* ========================= */
+/* 📱 MENU MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .banner {
+    height: 350px;
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .texto p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+/* ========================= */
+/* 🖼️ PROJETOS */
+/* ========================= */
+
+/* padrão (desktop) */
+@media (max-width: 768px) {
+
+   .projetos-linha {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 10px;
+  }
+
+   .projeto {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .projeto img {
+   width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .projeto p {
+    color: #000;
+    font-size: 11px;
+    padding: 6px 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    bottom: 10px;
+    text-align: center;
+  }
+}
+
+/* ========================= */
+/* 📷 GALERIA */
+/* ========================= */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* celular */
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================= */
+/* 🧾 FOOTER */
+/* ========================= */
+
+.footer-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .footer-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* celular */
+@media (max-width: 600px) {
+  .footer-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================= */
+/* 🔙 BOTÃO */
+/* ========================= */
+
+.btn-voltar {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 14px;
+  background-color: #8B5E3C;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* ========================= */
+/* 🎴 CARDS */
+/* ========================= */
+
+/* padrão (desktop) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.card img {
+  height: 320px;
+  border-radius: 12px;
+}
+
+.card p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;   /* mais espaço entre colunas */
+    padding: 40px 20px;
+  }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+
+  .cards {
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .sobre {
+    padding: 50px 25px;
+    text-align: center; /* centraliza o texto */
+  }
+
+  .container-sobre {
+    display: flex;
+    flex-direction: column; /* imagem em cima, texto embaixo */
+    align-items: center;
+    gap: 35px; /* espaço entre imagem e texto */
+  }
+
+  .container-sobre img {
+    width: 85%;          /* largura boa, não muito fina */
+    height: 550px;       /* altura maior para destacar bem */
+    object-fit: cover;   /* mantém proporção sem distorcer */
+    border-radius: 12px;
+    margin: 0 auto;      /* centraliza */
+  }
+
+  .texto-sobre {
+    width: 90%;          /* acompanha a largura da imagem */
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .texto-sobre h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .texto-sobre p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .publicacoes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .pub-img img {
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .parallax-padrao,
+  .parallax-padrao-projetos2 {
+    background-attachment: scroll !important;
+    background-position: center center;
+    background-size: cover;
+    height: 350px;
+  }
+
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}

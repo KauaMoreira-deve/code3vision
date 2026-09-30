@@ -1,0 +1,43 @@
+services:
+
+  app:
+    build: .
+    container_name: pingo-decor-app
+    user: "${APP_UID:-1000}:${APP_GID:-1000}"
+    working_dir: /var/www
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./src:/var/www
+
+  nginx:
+    image: nginx:latest
+    container_name: pingo-decor-nginx
+    ports:
+      - "8001:80"
+    volumes:
+      - ./src:/var/www
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+
+  mysql:
+    image: mysql:8.4
+    container_name: pingo-decor-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pingo-decor
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "--protocol=TCP", "-h127.0.0.1", "--silent"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
