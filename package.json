@@ -4,8 +4,8 @@
   "private": true,
   "description": "Code4Vision — hero e apresentação de estúdio digital",
   "scripts": {
-    "dev": "node server.cjs",
-    "start": "node server.cjs"
+    "dev": "node js/server.cjs",
+    "start": "node js/server.cjs"
   },
   "engines": {
     "node": ">=18"

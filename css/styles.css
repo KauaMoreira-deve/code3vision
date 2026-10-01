@@ -2,12 +2,12 @@
 
 :root {
     color-scheme: dark;
-    --bg: #09090c;
-    --panel: #15121c;
-    --ink: #f3f0fa;
-    --muted: #a19aa9;
+    --bg: #07111f;
+    --panel: #0d1b2e;
+    --ink: #f8faff;
+    --muted: #cbd5e1;
     --accent: #b888ff;
-    --line: rgba(211, 190, 242, .15);
+    --line: rgba(88, 116, 154, .32);
     --font: "DM Sans", Arial, sans-serif;
     --serif: "Instrument Serif", "Times New Roman", serif
 }
@@ -279,7 +279,7 @@ button:disabled {
     box-shadow: 0 0 0 4px rgba(184, 136, 255, .09)
 }
 
-h1 {
+.hero-title {
     font-size: clamp(82px, 8.35vw, 200px);
     line-height: .96;
     letter-spacing: -.065em;
@@ -289,7 +289,7 @@ h1 {
     width: max-content
 }
 
-h1 em {
+.hero-title em {
     font-family: var(--serif);
     font-weight: 400;
     letter-spacing: -.034em;
@@ -749,7 +749,7 @@ h2 em {
     width: calc(100% - 40px);
     max-height: calc(100svh - 40px);
     overflow: auto;
-    background: #16121e;
+    background: #0d1b2e;
     color: var(--ink);
     padding: 46px;
     border: 1px solid #4a365f;
@@ -758,7 +758,7 @@ h2 em {
 }
 
 .modal::backdrop {
-    background: #060409c9;
+    background: #07111fd9;
     backdrop-filter: blur(10px)
 }
 
@@ -780,7 +780,7 @@ h2 em {
 }
 
 .dialog-close:hover {
-    background: #31213f
+    background: #17345c
 }
 
 .dialog-close .icon {
@@ -842,7 +842,7 @@ input:not([type="radio"]),
 textarea {
     width: 100%;
     padding: 12px 13px;
-    background: #0d0a12;
+    background: #07111f;
     border: 1px solid #3c2c4e;
     border-radius: 7px;
     color: var(--ink);
@@ -1163,7 +1163,7 @@ legend {
         padding: 64px 0 55px
     }
 
-    h1 {
+    .hero-title {
         font-size: clamp(64px, 8.4vw, 84px)
     }
 
@@ -1370,7 +1370,7 @@ legend {
         left: -1px;
         right: -1px;
         top: calc(100% + 10px);
-        background: #1b1326;
+        background: #0d1b2e;
         border: 1px solid #48325b;
         border-radius: 12px;
         padding: 15px 22px;
@@ -1416,7 +1416,7 @@ legend {
         margin-bottom: 28px
     }
 
-    h1 {
+    .hero-title {
         font-size: clamp(65px, 12.4vw, 94px);
         line-height: .96;
         letter-spacing: -.065em
@@ -1669,7 +1669,7 @@ legend {
         padding-top: 52px
     }
 
-    h1 {
+    .hero-title {
         font-size: 94px
     }
 
@@ -1709,7 +1709,7 @@ legend {
         padding: 0 18px
     }
 
-    h1 {
+    .hero-title {
         font-size: 61px
     }
 
